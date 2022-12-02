@@ -1,0 +1,54 @@
+\hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+{\ttfamily \#include \char`\"{}tty\+\_\+lib2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lib\+\_\+grupox.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file main.\+cpp.
+
+
+\begin{DoxyCode}
+4                                 \{
+5 
+6     \hyperlink{classparticipante}{participante} participantes[\hyperlink{lib__grupox_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}];
+7     \textcolor{keyword}{struct }termios tty;
+8     \textcolor{keywordtype}{int} serial\_port, read\_buf, num\_per;
+9     \textcolor{keywordtype}{int} cant\_per,i=0, veces[\hyperlink{lib__grupox_8h_a392fb874e547e582e9c66a08a1f23326}{MAX}];
+10     \textcolor{keywordtype}{int} tp = atoi(argv[1]);
+11     \textcolor{keywordtype}{int} vtl= atoi(argv[2]);
+12 
+13     \hyperlink{tty__lib2_8h_af4b26b32c3c509fa307419652482c659}{config\_tty} (\textcolor{stringliteral}{"/dev/ttyS0"}, &tty, B9600, &serial\_port);
+14     sleep(2);
+15 
+16     write(serial\_port,\textcolor{stringliteral}{"l"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+17 
+18     std::cout << \textcolor{stringliteral}{"Ingrese el número de participantes: "};
+19     std::cin >> num\_per;
+20 
+21     \textcolor{keywordflow}{for} (i=0;i<num\_per;i++)\{
+22         \hyperlink{lib__grupox_8h_a7da1ff9224bdc7561f5b87d000f70485}{pedir\_datos}(&participantes[0],i);
+23         \hyperlink{lib__grupox_8h_a681c7e1141f7d72ea89976071ae5d14e}{juego}(&serial\_port, i, tp, vtl, &veces[0]);
+24         \hyperlink{lib__grupox_8h_a3044570f54dfe465b2d0ee3374b84e73}{ingresar\_veces}(&participantes[0],&veces[0],i);
+25     \}
+26 
+27     \textcolor{keywordflow}{for} (i=0;i<num\_per;i++)\{
+28         \hyperlink{lib__grupox_8h_aff5ea412fd009e674bcf693a56cbd7f6}{imprimir\_resultados}(&participantes[0],i);
+29     \}
+30 
+31     close(serial\_port);
+32 \}
+\end{DoxyCode}

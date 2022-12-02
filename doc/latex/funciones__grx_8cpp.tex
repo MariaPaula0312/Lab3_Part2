@@ -1,0 +1,103 @@
+\hypertarget{funciones__grx_8cpp}{}\section{src/funciones\+\_\+grx.cpp File Reference}
+\label{funciones__grx_8cpp}\index{src/funciones\+\_\+grx.\+cpp@{src/funciones\+\_\+grx.\+cpp}}
+{\ttfamily \#include \char`\"{}lib\+\_\+grupox.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{funciones__grx_8cpp_a55cbac286c11521182cd06e4a23dd22e}{pedir\+\_\+datos} (\hyperlink{classparticipante}{participante} $\ast$participantes, int i)
+\item 
+void \hyperlink{funciones__grx_8cpp_ac7a00c85096d27e6f642d9dcbf2ca539}{juego} (int $\ast$serial\+\_\+port, int i, int tp, int vtl, int $\ast$veces)
+\item 
+void \hyperlink{funciones__grx_8cpp_ac147fcafff22cae628dfbf4a686cb0bc}{ingresar\+\_\+veces} (\hyperlink{classparticipante}{participante} $\ast$participantes, int $\ast$veces, int i)
+\item 
+void \hyperlink{funciones__grx_8cpp_aff642003ce611b008854569d26fe4331}{imprimir\+\_\+resultados} (\hyperlink{classparticipante}{participante} $\ast$participantes, int i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{funciones__grx_8cpp_aff642003ce611b008854569d26fe4331}\label{funciones__grx_8cpp_aff642003ce611b008854569d26fe4331}} 
+\index{funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}!imprimir\+\_\+resultados@{imprimir\+\_\+resultados}}
+\index{imprimir\+\_\+resultados@{imprimir\+\_\+resultados}!funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}}
+\subsubsection{\texorpdfstring{imprimir\+\_\+resultados()}{imprimir\_resultados()}}
+{\footnotesize\ttfamily void imprimir\+\_\+resultados (\begin{DoxyParamCaption}\item[{\hyperlink{classparticipante}{participante} $\ast$}]{participantes,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+35                                                             \{
+36         std::cout << endl << participantes[i].\hyperlink{classparticipante_a00d27dd27a5bf61677c8dfc8937e1b43}{get\_nombre}() << endl << \textcolor{stringliteral}{"Con identificación: "}<< 
+      participantes[i].\hyperlink{classparticipante_a7bf312844c7814bcaaf6b20466a16283}{get\_participant\_id}()<<endl;
+37         printf(\textcolor{stringliteral}{"Pulso: %d veces\(\backslash\)n"}, (\textcolor{keywordtype}{char})participantes[i].get\_veces\_pushed());
+38 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{funciones__grx_8cpp_ac147fcafff22cae628dfbf4a686cb0bc}\label{funciones__grx_8cpp_ac147fcafff22cae628dfbf4a686cb0bc}} 
+\index{funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}!ingresar\+\_\+veces@{ingresar\+\_\+veces}}
+\index{ingresar\+\_\+veces@{ingresar\+\_\+veces}!funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}}
+\subsubsection{\texorpdfstring{ingresar\+\_\+veces()}{ingresar\_veces()}}
+{\footnotesize\ttfamily void ingresar\+\_\+veces (\begin{DoxyParamCaption}\item[{\hyperlink{classparticipante}{participante} $\ast$}]{participantes,  }\item[{int $\ast$}]{veces,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+31                                                                   \{
+32         participantes[i].\hyperlink{classparticipante_a993d194c0c2f2d2e2ce13a23f8ca2a35}{set\_pushed}(veces[i]);
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{funciones__grx_8cpp_ac7a00c85096d27e6f642d9dcbf2ca539}\label{funciones__grx_8cpp_ac7a00c85096d27e6f642d9dcbf2ca539}} 
+\index{funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}!juego@{juego}}
+\index{juego@{juego}!funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}}
+\subsubsection{\texorpdfstring{juego()}{juego()}}
+{\footnotesize\ttfamily void juego (\begin{DoxyParamCaption}\item[{int $\ast$}]{serial\+\_\+port,  }\item[{int}]{i,  }\item[{int}]{tp,  }\item[{int}]{vtl,  }\item[{int $\ast$}]{veces }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+18                                                                 \{
+19     \textcolor{keywordtype}{int} num\_bytes, read\_buf;
+20 
+21     write(*serial\_port,\textcolor{stringliteral}{"s"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+22     sleep(tp);
+23     write(*serial\_port,\textcolor{stringliteral}{"r"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+24     sleep(vtl);
+25     write(*serial\_port,\textcolor{stringliteral}{"S"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+26     num\_bytes = read(*serial\_port, &read\_buf,\textcolor{keyword}{sizeof}(read\_buf));
+27     veces[i]=read\_buf;
+28 
+29 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{funciones__grx_8cpp_a55cbac286c11521182cd06e4a23dd22e}\label{funciones__grx_8cpp_a55cbac286c11521182cd06e4a23dd22e}} 
+\index{funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}!pedir\+\_\+datos@{pedir\+\_\+datos}}
+\index{pedir\+\_\+datos@{pedir\+\_\+datos}!funciones\+\_\+grx.\+cpp@{funciones\+\_\+grx.\+cpp}}
+\subsubsection{\texorpdfstring{pedir\+\_\+datos()}{pedir\_datos()}}
+{\footnotesize\ttfamily void pedir\+\_\+datos (\begin{DoxyParamCaption}\item[{\hyperlink{classparticipante}{participante} $\ast$}]{participantes,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+3                                                     \{
+4 
+5     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} id;
+6     \textcolor{keywordtype}{string} nombre;
+7 
+8     std::cout << endl << \textcolor{stringliteral}{"Participante "} << i+1 << endl;
+9     std::cout << \textcolor{stringliteral}{"Ingrese el nombre del participante: "};
+10     std::cin >> nombre;
+11     std::cout << \textcolor{stringliteral}{"Ingrese el ID del participante: "};
+12     std::cin >> id;
+13 
+14     participantes[i].\hyperlink{classparticipante_ab315d25505963e66486cc24b1eafef32}{set\_participant}(\textcolor{keywordtype}{id},nombre);
+15 
+16 \}
+\end{DoxyCode}

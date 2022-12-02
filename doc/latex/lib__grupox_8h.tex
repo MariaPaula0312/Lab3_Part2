@@ -1,0 +1,130 @@
+\hypertarget{lib__grupox_8h}{}\section{include/lib\+\_\+grupox.h File Reference}
+\label{lib__grupox_8h}\index{include/lib\+\_\+grupox.\+h@{include/lib\+\_\+grupox.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classparticipante}{participante}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lib__grupox_8h_a392fb874e547e582e9c66a08a1f23326}{M\+AX}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lib__grupox_8h_a7da1ff9224bdc7561f5b87d000f70485}{pedir\+\_\+datos} (\hyperlink{classparticipante}{participante} $\ast$, int)
+\item 
+void \hyperlink{lib__grupox_8h_a681c7e1141f7d72ea89976071ae5d14e}{juego} (int $\ast$, int, int, int, int $\ast$)
+\item 
+void \hyperlink{lib__grupox_8h_a3044570f54dfe465b2d0ee3374b84e73}{ingresar\+\_\+veces} (\hyperlink{classparticipante}{participante} $\ast$, int $\ast$, int)
+\item 
+void \hyperlink{lib__grupox_8h_aff5ea412fd009e674bcf693a56cbd7f6}{imprimir\+\_\+resultados} (\hyperlink{classparticipante}{participante} $\ast$, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lib__grupox_8h_a392fb874e547e582e9c66a08a1f23326}\label{lib__grupox_8h_a392fb874e547e582e9c66a08a1f23326}} 
+\index{lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}!M\+AX@{M\+AX}}
+\index{M\+AX@{M\+AX}!lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}}
+\subsubsection{\texorpdfstring{M\+AX}{MAX}}
+{\footnotesize\ttfamily \#define M\+AX~10}
+
+
+
+Definition at line 12 of file lib\+\_\+grupox.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lib__grupox_8h_aff5ea412fd009e674bcf693a56cbd7f6}\label{lib__grupox_8h_aff5ea412fd009e674bcf693a56cbd7f6}} 
+\index{lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}!imprimir\+\_\+resultados@{imprimir\+\_\+resultados}}
+\index{imprimir\+\_\+resultados@{imprimir\+\_\+resultados}!lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}}
+\subsubsection{\texorpdfstring{imprimir\+\_\+resultados()}{imprimir\_resultados()}}
+{\footnotesize\ttfamily void imprimir\+\_\+resultados (\begin{DoxyParamCaption}\item[{\hyperlink{classparticipante}{participante} $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+35                                                             \{
+36         std::cout << endl << participantes[i].get\_nombre() << endl << \textcolor{stringliteral}{"Con identificación: "}<< 
+      participantes[i].get\_participant\_id()<<endl;
+37         printf(\textcolor{stringliteral}{"Pulso: %d veces\(\backslash\)n"}, (\textcolor{keywordtype}{char})participantes[i].get\_veces\_pushed());
+38 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{lib__grupox_8h_a3044570f54dfe465b2d0ee3374b84e73}\label{lib__grupox_8h_a3044570f54dfe465b2d0ee3374b84e73}} 
+\index{lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}!ingresar\+\_\+veces@{ingresar\+\_\+veces}}
+\index{ingresar\+\_\+veces@{ingresar\+\_\+veces}!lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}}
+\subsubsection{\texorpdfstring{ingresar\+\_\+veces()}{ingresar\_veces()}}
+{\footnotesize\ttfamily void ingresar\+\_\+veces (\begin{DoxyParamCaption}\item[{\hyperlink{classparticipante}{participante} $\ast$}]{,  }\item[{int $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+31                                                                   \{
+32         participantes[i].set\_pushed(veces[i]);
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{lib__grupox_8h_a681c7e1141f7d72ea89976071ae5d14e}\label{lib__grupox_8h_a681c7e1141f7d72ea89976071ae5d14e}} 
+\index{lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}!juego@{juego}}
+\index{juego@{juego}!lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}}
+\subsubsection{\texorpdfstring{juego()}{juego()}}
+{\footnotesize\ttfamily void juego (\begin{DoxyParamCaption}\item[{int $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+18                                                                 \{
+19     \textcolor{keywordtype}{int} num\_bytes, read\_buf;
+20 
+21     write(*serial\_port,\textcolor{stringliteral}{"s"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+22     sleep(tp);
+23     write(*serial\_port,\textcolor{stringliteral}{"r"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+24     sleep(vtl);
+25     write(*serial\_port,\textcolor{stringliteral}{"S"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+26     num\_bytes = read(*serial\_port, &read\_buf,\textcolor{keyword}{sizeof}(read\_buf));
+27     veces[i]=read\_buf;
+28 
+29 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{lib__grupox_8h_a7da1ff9224bdc7561f5b87d000f70485}\label{lib__grupox_8h_a7da1ff9224bdc7561f5b87d000f70485}} 
+\index{lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}!pedir\+\_\+datos@{pedir\+\_\+datos}}
+\index{pedir\+\_\+datos@{pedir\+\_\+datos}!lib\+\_\+grupox.\+h@{lib\+\_\+grupox.\+h}}
+\subsubsection{\texorpdfstring{pedir\+\_\+datos()}{pedir\_datos()}}
+{\footnotesize\ttfamily void pedir\+\_\+datos (\begin{DoxyParamCaption}\item[{\hyperlink{classparticipante}{participante} $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file funciones\+\_\+grx.\+cpp.
+
+
+\begin{DoxyCode}
+3                                                     \{
+4 
+5     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} id;
+6     \textcolor{keywordtype}{string} nombre;
+7 
+8     std::cout << endl << \textcolor{stringliteral}{"Participante "} << i+1 << endl;
+9     std::cout << \textcolor{stringliteral}{"Ingrese el nombre del participante: "};
+10     std::cin >> nombre;
+11     std::cout << \textcolor{stringliteral}{"Ingrese el ID del participante: "};
+12     std::cin >> id;
+13 
+14     participantes[i].set\_participant(\textcolor{keywordtype}{id},nombre);
+15 
+16 \}
+\end{DoxyCode}

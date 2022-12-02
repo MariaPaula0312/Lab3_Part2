@@ -1,0 +1,160 @@
+\hypertarget{classparticipante}{}\section{participante Class Reference}
+\label{classparticipante}\index{participante@{participante}}
+
+
+{\ttfamily \#include $<$lib\+\_\+grupox.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classparticipante_a23dad13159ab3128aaa5ff566d17651c}{participante} ()
+\item 
+\hyperlink{classparticipante_a585a21b68cdaf42e2c4e14db840eacef}{participante} (unsigned int id, string nom, unsigned int pushed)
+\item 
+void \hyperlink{classparticipante_ab315d25505963e66486cc24b1eafef32}{set\+\_\+participant} (unsigned int, string)
+\item 
+void \hyperlink{classparticipante_a993d194c0c2f2d2e2ce13a23f8ca2a35}{set\+\_\+pushed} (unsigned int)
+\item 
+unsigned int \hyperlink{classparticipante_a7bf312844c7814bcaaf6b20466a16283}{get\+\_\+participant\+\_\+id} ()
+\item 
+unsigned int \hyperlink{classparticipante_a7141f603db73fc7efa9788e41aa8dd66}{get\+\_\+veces\+\_\+pushed} ()
+\item 
+string \hyperlink{classparticipante_a00d27dd27a5bf61677c8dfc8937e1b43}{get\+\_\+nombre} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file lib\+\_\+grupox.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticipante_a23dad13159ab3128aaa5ff566d17651c}\label{classparticipante_a23dad13159ab3128aaa5ff566d17651c}} 
+\index{participante@{participante}!participante@{participante}}
+\index{participante@{participante}!participante@{participante}}
+\subsubsection{\texorpdfstring{participante()}{participante()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily participante\+::participante (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+4 : participant\_id(0), veces\_pushed(0), nombre()\{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipante_a585a21b68cdaf42e2c4e14db840eacef}\label{classparticipante_a585a21b68cdaf42e2c4e14db840eacef}} 
+\index{participante@{participante}!participante@{participante}}
+\index{participante@{participante}!participante@{participante}}
+\subsubsection{\texorpdfstring{participante()}{participante()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily participante\+::participante (\begin{DoxyParamCaption}\item[{unsigned int}]{id,  }\item[{string}]{nom,  }\item[{unsigned int}]{pushed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+5 : participant\_id(\textcolor{keywordtype}{id}), nombre(nom),veces\_pushed(pushed)\{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticipante_a00d27dd27a5bf61677c8dfc8937e1b43}\label{classparticipante_a00d27dd27a5bf61677c8dfc8937e1b43}} 
+\index{participante@{participante}!get\+\_\+nombre@{get\+\_\+nombre}}
+\index{get\+\_\+nombre@{get\+\_\+nombre}!participante@{participante}}
+\subsubsection{\texorpdfstring{get\+\_\+nombre()}{get\_nombre()}}
+{\footnotesize\ttfamily string participante\+::get\+\_\+nombre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+29                                \{
+30     \textcolor{keywordtype}{string} nom;
+31     nom = nombre;
+32 
+33     \textcolor{keywordflow}{return} nom;
+34 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipante_a7bf312844c7814bcaaf6b20466a16283}\label{classparticipante_a7bf312844c7814bcaaf6b20466a16283}} 
+\index{participante@{participante}!get\+\_\+participant\+\_\+id@{get\+\_\+participant\+\_\+id}}
+\index{get\+\_\+participant\+\_\+id@{get\+\_\+participant\+\_\+id}!participante@{participante}}
+\subsubsection{\texorpdfstring{get\+\_\+participant\+\_\+id()}{get\_participant\_id()}}
+{\footnotesize\ttfamily unsigned int participante\+::get\+\_\+participant\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+17                                              \{
+18     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} identificador;
+19     identificador = participant\_id;
+20 
+21     \textcolor{keywordflow}{return} identificador;
+22 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipante_a7141f603db73fc7efa9788e41aa8dd66}\label{classparticipante_a7141f603db73fc7efa9788e41aa8dd66}} 
+\index{participante@{participante}!get\+\_\+veces\+\_\+pushed@{get\+\_\+veces\+\_\+pushed}}
+\index{get\+\_\+veces\+\_\+pushed@{get\+\_\+veces\+\_\+pushed}!participante@{participante}}
+\subsubsection{\texorpdfstring{get\+\_\+veces\+\_\+pushed()}{get\_veces\_pushed()}}
+{\footnotesize\ttfamily unsigned int participante\+::get\+\_\+veces\+\_\+pushed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+23                                            \{
+24     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} veces;
+25     veces = veces\_pushed;
+26 
+27     \textcolor{keywordflow}{return} veces;
+28 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipante_ab315d25505963e66486cc24b1eafef32}\label{classparticipante_ab315d25505963e66486cc24b1eafef32}} 
+\index{participante@{participante}!set\+\_\+participant@{set\+\_\+participant}}
+\index{set\+\_\+participant@{set\+\_\+participant}!participante@{participante}}
+\subsubsection{\texorpdfstring{set\+\_\+participant()}{set\_participant()}}
+{\footnotesize\ttfamily void participante\+::set\+\_\+participant (\begin{DoxyParamCaption}\item[{unsigned int}]{id,  }\item[{string}]{nom }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+8                                                              \{
+9         participant\_id = id;
+10         nombre = nom;
+11 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipante_a993d194c0c2f2d2e2ce13a23f8ca2a35}\label{classparticipante_a993d194c0c2f2d2e2ce13a23f8ca2a35}} 
+\index{participante@{participante}!set\+\_\+pushed@{set\+\_\+pushed}}
+\index{set\+\_\+pushed@{set\+\_\+pushed}!participante@{participante}}
+\subsubsection{\texorpdfstring{set\+\_\+pushed()}{set\_pushed()}}
+{\footnotesize\ttfamily void participante\+::set\+\_\+pushed (\begin{DoxyParamCaption}\item[{unsigned int}]{cant }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+13                                               \{
+14         veces\_pushed = cant;
+15 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{lib__grupox_8h}{lib\+\_\+grupox.\+h}\item 
+src/\hyperlink{participant_8cpp}{participant.\+cpp}\end{DoxyCompactItemize}
